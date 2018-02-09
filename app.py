@@ -1,4 +1,4 @@
-import tornado.ioloop
+import tornado
 import config.routes as router
 
 def init_app():
