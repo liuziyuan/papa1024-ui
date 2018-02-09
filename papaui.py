@@ -1,17 +1,14 @@
 import tornado.ioloop
 import tornado.web
+import config.routes as router
 
-class MainHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.write("Hello, world")
-
-def make_app():
-    return tornado.web.Application([
-        (r"/", MainHandler),
-    ])
+def application():
+    return tornado.web.Application(
+        router.get_routes()
+    )
 
 if __name__ == "__main__":
     print('hello tornado')
-    app = make_app()
+    app = application()
     app.listen(8888)
     tornado.ioloop.IOLoop.current().start()
