@@ -6,7 +6,7 @@ sudo docker build -t papa1024-ui .
 sudo docker run -i -t -p 8888:8888  papa1024-ui
 ```
 
-## Pre-Develop
+## Pre-Development
 
 ### install tornado
 ```
@@ -38,4 +38,18 @@ HomePage: https://github.com/FSX/momoko
 
 ```
 pip install momoko
+```
+## Development
+
+### Generate requirements.txt
+```
+pip install pipreqs
+
+cd project-root-path
+pipreqs ./
+```
+
+### Recover project
+```
+pip install -r requirements.txt
 ```
